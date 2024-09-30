@@ -2,7 +2,7 @@
 ASM-oriented NVIM configuration, made with curious intensity.
 
 # Installation:
-This config uses lazy packet-manager - it means that we must use nvim >= 0.8.0 . 
+This config uses lazy package-manager - it means that we must use nvim >= 0.8.0 . 
 (Ubuntu example)
 
 	sudo add-apt-repository ppa:neovim-ppa/unstable -y
