@@ -21,6 +21,7 @@ Backup/Remove your current config with this:
 
 Now you're ready to install this config
 
-	git clone ~/.config/nvim/ https://github.com/liltymoor/neovim-config.git
+ 	cd ~/.config/nvim/
+	git clone https://github.com/liltymoor/neovim-config.git
 
 **Cheat-Sheet will appear here later.**
