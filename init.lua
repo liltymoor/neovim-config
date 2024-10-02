@@ -1,5 +1,6 @@
 -- Basic
 require('core.plugins')
+vim.opt.number = true
 vim.api.nvim_set_keymap('n', 'asm', ':w<CR>:!nasm -felf64 % -o %<.o && ld -o %< %<.o && chmod u+x %< && ./%< <CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-a>', '<esc>gg0VG<CR>', { noremap = true, silent = true })
 vim.api.nvim_create_autocmd("FileType", {
