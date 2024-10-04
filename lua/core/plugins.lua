@@ -23,7 +23,44 @@ require("lazy").setup({
             "s1n7ax/nvim-window-picker"
 	}
     },
-
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('lualine').setup()
+    end
+  },
+{
+  'navarasu/onedark.nvim',
+  config = function()
+    require('onedark').setup {
+      style = 'darker',
+      colors = {
+        purple = '#a9a1e1', -- настраиваем пурпурный оттенок
+        grey = '#3B4048'
+      }
+    }
+    require('onedark').load()
+  end
+},
+{
+  'sakhnik/nvim-gdb',
+  run = ':TSUpdate asm',
+  ft = 'asm'
+},
+{
+  'nvim-treesitter/nvim-treesitter',
+  run = ':TSUpdate',
+  config = function()
+    require'nvim-treesitter.configs'.setup {
+      ensure_installed = { "html", "markdown", "markdown_inline", "asm", "make" }, -- Убедитесь, что markdown и другие языки установлены
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
+    }
+  end
+},
     {
       "OXY2DEV/markview.nvim",
       lazy = false,      -- Recommended
@@ -39,6 +76,7 @@ require("lazy").setup({
       }
     },
     
-
-
 })
+
+
+
